@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="icon" href="STUDIOB.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: Calibri;
+      background-color: rgb(42, 219, 219);
+      color: #17252a;
+    }
+
+        header {
+      background-color: linear-gradient(135deg, #17252a, rgb(42, 219, 219));
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .stu h1 {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Trebuchet MS';
+      animation: bounceDown 2s ease-in-out infinite;
+      margin: 0;
+    }
+
+    .stu {
+      border-top: 1px solid #000;
+      margin-bottom: 20px;
+    }
+    .studio {
+      color: white;
+    }
+
+    .b {
+      color: black;
+    }
+
+    .eam {
+      color: white;
+    }
+
+    .dot {
+      color: rgb(42, 219, 219);
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: right;
+      letter-spacing: 1px;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #17252a;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .menu-toggle span {
+      background: #17252a;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    footer {
+            letter-spacing: 1px;
+      word-spacing: 1px;
+      background: transparent;
+      padding: 60px 20px 30px;
+      color: #17252a;
+      text-align: left
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-content .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: rgb(42, 219, 219);
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .columns div {
+      min-width: 180px;
+    }
+
+    .columns h4 {
+      color: #000;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+    .columns p {
+      color: #17252a;
+    }
+
+    .columns p, .columns input {
+      margin: 6px 0;
+    }
+
+    footer p {
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      font-family: Calibri;
+      text-align: left;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .columns {
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        padding: 0 10px;
+      }
+
+      .columns div {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-content .logo {
+        font-size: 22px;
+      }
+
+      .columns h4 {
+        font-size: 16px;
+      }
+    }
+
+    .foot p {
+      font-size: 13px;
+      color: #17252a;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      text-align: center;
+    }
+
+    .quote-btn {
+      border: 2px solid #17252a;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #17252a;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: 0.3s;
+      margin-top: 30px;
+      text-align: right;
+    }
+
+    .quote-btn:hover {
+      background-color: #17252a;
+      color: #17252a;
+    }
+
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 80px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: #fff;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .view-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #17252a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: 0.3s;
+      letter-spacing: 0.9px;
+    }
+
+    .view-btn:hover {
+      background-color: #17252a;
+    }
+
+    .hero-image img {
+      width: 400px;
+      max-width: 100%;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 768px) {
+
+      .quote-btn {
+        align-self: flex-end;
+      }
+    }
+
+    .nav-links a {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .view {
+      padding-left: 250px;
+      padding-right: 0px;
+    }
+
+    .footer-section p {
+       color: #17252a;
+    }
+
+    .footer-section h4 {
+      color: #000;
+    }
+
+        .social-icons {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .social-icons a {
+      color: black;
+      font-size: 24px;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #17252a;
+    }
+
+  </style>
+</head>
+<body>
+      <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links" id="navMenu">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="services.html" class="quote-btn">View Our Services</a>
+      </header>
+      <div class=view>
+      </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Light-Speed<br><span>Digital</span></h1>
+      <p>Pixel-perfect builds, lightning-fast results.</p>
+      <a href="About.html" class="view-btn">Learn More</a>
+    </div>
+    <div class="hero-image">
+      <img src="Webdev1.png" alt="Agency Illustration">
+    </div>
+  </section>
+      <footer>
+        <div class="footer-content">
+          <footer class="stu">
+            <h1>
+              <span class="studio">Studio</span><span class="b">B</span><span class="eam">eam</span><span class="dot">.</span>
+            </h1>
+          </footer>
+          <div class="columns">
+            <div>
+              <h4>Useful Links</h4>
+              <p>HomePage</p>
+              <p>About Us</p>
+              <p>Services</p>
+              <p>Pricing</p>
+            </div>
+            <div>
+              <h4>Solutions</h4>
+              <p>Web Design</p>
+              <p>App Development</p>
+              <p>UI/UX Design</p>
+              <p>Business Stationery</p>
+            </div>
+            <div>
+              <h4>Contact Info</h4>
+              <p>11, Goodness Estate, Ib</p>
+              <p>Open: 08 AM - 10 PM</p>
+              <p>Help: +234-802-516-8334</p>
+              <p>hello@StudioBeam.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+<footer class="footer">
+  <div class="footer-section">
+    <h4>____________________________________</h4>
+<p>Founded by Creators, built for Innovators</a>
+  </div>
+  </footer>
+        <script>
+          function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+          }
+        </script>
+</body>
+         <div class="social-icons">
+            <a href="https://wa.me/2348025168334" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/timi_xx_" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/2348025168334" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:owolabiemma15@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+          </div>
+        <footer class="foot">
+          <p class="copyright">StudioBeam.© Copyright 2025. All rights reserved.</p>
+        </footer>
+</html>

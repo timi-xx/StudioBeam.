@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="STUDIOB.jpg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Calibri;
+      background-color: #17252a;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #17252a;
+    }
+
+    .studio {
+      color: white;
+    }
+
+    .b {
+      color: black;
+    }
+
+    .eam {
+      color: white;
+    }
+
+    .dot {
+      color: rgb(42, 219, 219);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #17252a;
+      padding: 10px 20px;
+    }
+
+    .mobile-nav a {
+      margin: 10px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      justify-content: center;
+    }
+
+    .contact-left, .contact-right {
+      flex: 1;
+      min-width: 300px;
+      margin: 20px;
+      color: white;
+    }
+
+    .contact-left h1 {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-left p {
+      font-size: 1.1em;
+      text-align: center;
+      font-weight: lighter;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin: 20px 0;
+      font-size: 18px;
+      font-family: serif;
+    }
+
+    .contact-info img {
+      height: 35px;
+      width: 35px;
+      margin-bottom: 10px;
+    }
+
+    .contact-right {
+      background-color: rgb(42, 219, 219);
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+    }
+
+    .contact-right textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .contact-right button {
+      margin-top: 10px;
+      background: none;
+      color: #fff;
+      border: none;
+      border-bottom: 2px solid #fff;
+      cursor: pointer;
+    }
+
+    .contact-right input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav.active {
+        display: flex;
+      }
+
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-left, .contact-right {
+        margin: 10px;
+      }
+    }
+
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Calibri;
+      background: #17252a;
+      color: #17252a;
+    }
+
+    header {
+      background-color: #17252a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .stu h1 {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Trebuchet MS';
+      animation: bounceDown 2s ease-in-out infinite;
+      margin: 0;
+    }
+
+    .stu {
+      border-top: 1px solid #000;
+      margin-bottom: 20px;
+    }
+    .studio {
+      color: white;
+    }
+
+    .b {
+      color: black;
+    }
+
+    .eam {
+      color: white;
+    }
+
+    .dot {
+      color: rgb(42, 219, 219);
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: left;
+      letter-spacing: 1px;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    
+        h2, h4 {
+          color: #fff;
+        }
+    
+    .pricing-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .pricing-section ul li {
+      font-weight: 500;
+    }
+
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 0 5px rgb(42, 219, 219);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+      .card.featured {
+      border: 0.6px solid rgb(42, 219, 219);
+  box-shadow: 0 0 7px rgb(42, 219, 219);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #dd1b1b;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    }
+
+    .price span {
+      font-size: 16px;
+      color: #17252a;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-bottom: 20px;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    .card ul li {
+      margin: 10px 0;
+    }
+
+    .card button {
+      background: rgb(42, 219, 219);
+      border: none;
+      padding: 10px 20px;
+      color: #17252a;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .contact-form {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .contact-form h3 {
+      color: white;
+    }
+
+    .contact-form form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      background: #fff;
+      color: #17252a;
+    }
+
+    .contact-form button {
+      grid-column: span 2;
+      padding: 12px;
+      background: rgb(42, 219, 219);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      font-family: Calibri;
+      background: #17252a;
+      padding: 60px 20px 30px;
+      color: #fff;
+      text-align: left
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-content .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: rgb(42, 219, 219);
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .columns div {
+      min-width: 180px;
+    }
+
+    .columns h4 {
+      color: #aaa;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+    .columns p {
+      color: white;
+    }
+
+    .columns p, .columns input {
+      margin: 6px 0;
+    }
+
+    .columns input {
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background: #1f2937;
+      color: #fff;
+    }
+
+    .columns button {
+      padding: 8px;
+      background: rgb(42, 219, 219);
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    footer p {
+      text-align: left;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+      .pricing-cards {
+        gap: 20px;
+      }
+
+      .contact-form form {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .columns {
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .contact-form form {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form button {
+        grid-column: span 1;
+      }
+
+      .footer-content {
+        padding: 0 10px;
+      }
+
+      .columns div {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 24px;
+      }
+
+      .price {
+        font-size: 26px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .contact-form h3 {
+        font-size: 18px;
+      }
+
+      .footer-content .logo {
+        font-size: 22px;
+      }
+
+      .columns h4 {
+        font-size: 16px;
+      }
+    }
+
+    .foot p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-links" id="navMenu">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-container">
+    <div class="contact-left">
+      <h1>Got an idea? Let's make it happen.</h1>
+      <p>Whether you're ready to kickstart a new project, need support with an existing site, or just want to say hello, we'd love to hear from you.</p>
+      <div class="contact-info">
+        <p><img src="Color mail.png" alt="mail icon"/><br> hello@StudioBeam.com</p>
+        <p><img src="Color phone.png" alt="phone icon"/><br> +234-802-516-8334, +234-906-456-8441</p>
+        <p><img src="google-maps.png" alt="map icon"/><br> 11, Goodness Estate, Ib</p>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <form>
+        <input type="text" placeholder="Company Name" required>
+        <input type="email" placeholder="Enter a valid email address" required>
+        <input type="text" placeholder="Enter your Name" required>
+        <input type="date" placeholder="mm/dd/yyyy">
+        <textarea placeholder="Service Interest"></textarea>
+        <textarea placeholder="Enter your message"></textarea>
+        <label><input type="checkbox" required> I accept the Terms of Service</label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <footer class="stu">
+        <h1>
+          <span class="studio">Studio</span><span class="b">B</span><span class="eam">eam</span><span class="dot">.</span>
+        </h1>
+      </footer>
+      <div class="columns">
+        <div>
+          <h4>Useful Links</h4>
+          <p>HomePage</p>
+          <p>About Us</p>
+          <p>Services</p>
+          <p>Pricing</p>
+        </div>
+        <div>
+          <h4>Solutions</h4>
+          <p>Web Design</p>
+          <p>App Development</p>
+          <p>UI/UX Design</p>
+          <p>Business Stationery</p>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <p>11, Goodness Estate, Ib</p>
+          <p>Open: 08 AM - 10 PM</p>
+          <p>Help: +234-802-516-8334</p>
+          <p>hello@StudioBeam.com</p>
+        </div>
+        <div>
+          <h4>Subscribe</h4>
+          <input type="email" placeholder="Your Email">
+          <button>Subscribe Now</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <footer class="foot">
+    <p class="copyright">StudioBeam.© Copyright 2025. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

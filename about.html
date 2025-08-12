@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="icon" href="STUDIOB.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #17252a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .stu h1 {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Trebuchet MS';
+      animation: bounceDown 2s ease-in-out infinite;
+      margin: 0;
+    }
+
+    .stu {
+      border-top: 1px solid #000;
+      margin-bottom: 20px;
+    }
+    .studio {
+      color: white;
+    }
+
+    .b {
+      color: black;
+    }
+
+    .eam {
+      color: white;
+    }
+
+    .dot {
+      color: rgb(42, 219, 219);
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: left;
+      letter-spacing: 1px;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    footer {
+            letter-spacing: 1px;
+      word-spacing: 1px;
+      background: #17252a;
+      padding: 60px 20px 30px;
+      color: #fff;
+      text-align: left
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-content .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: rgb(42, 219, 219);
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .columns div {
+      min-width: 180px;
+    }
+
+    .columns h4 {
+      color: #aaa;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+    .columns p, .columns input {
+      margin: 6px 0;
+    }
+
+    footer p {
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      font-family: Calibri;
+      text-align: left;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .columns {
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .footer-content {
+        padding: 0 10px;
+      }
+
+      .columns div {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .footer-content .logo {
+        font-size: 22px;
+      }
+
+      .columns h4 {
+        font-size: 16px;
+      }
+    }
+
+    .foot p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      text-align: center;
+    }
+
+    body {
+      margin: 0;
+      font-family: Calibri;
+      background: #17252a;
+      color: #fff;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 50px;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .hero-text p, .hero-text ul {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    .hero-text ul {
+      padding-left: 20px;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-img img {
+        margin-top: 35px;
+      }
+
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Who We Are</h1>
+      <p>At StudioBeam, we specialize in crafting sleek, high-performance digital solutions that help businesses thrive in the modern world. From responsive websites and intuitive mobile applications, elegantly graphical UI/UX interface designs to custom-designed corporate identity materials. We deliver seamless experience that blend creativity with functionality.</p>
+    </div>
+    <div class="hero-img">
+      <img src="Bout.png" alt="Laptop showing design">
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Our Mission</h1>
+      <p>We aim to empower brands with innovative digital tools that drive engagement, boost efficiency, and leave lasting impressions.</p>
+    </div>
+    <div class="hero-img">
+      <img src="Homepic.png" alt="Laptop showing design">
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Why Choose Us</h1>
+      <ul>
+        <li>Expert Craftsmanship: Clean code and pixel-perfect design.</li>
+        <li>User-Centric Approach: We focus on functionality and user experience.</li>
+        <li>Custom Solutions: Tailored to fit your unique brand and business goals.</li>
+        <li>Ongoing Support: From development to maintenance, we're with you every step of the way.</li>
+      </ul>
+    </div>
+    <div class="hero-img">
+      <img src="Us.jpg" alt="Why choose us image">
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Who We Serve</h1>
+      <p>Our clients range from start-ups and entrepreneurs to established businesses across diverse industries, including e-commerce, finance, and professional services.</p>
+    </div>
+    <div class="hero-img">
+      <img src="SU.jpg" alt="Who we serve image">
+      <img src="IconSB.jpg" alt="Icon image">
+    </div>
+  </section>
+    <footer>
+      <div class="footer-content">
+        <footer class="stu">
+          <h1>
+            <span class="studio">Studio</span><span class="b">B</span><span class="eam">eam</span><span class="dot">.</span>
+          </h1>
+        </footer>
+        <div class="columns">
+          <div>
+            <h4>Useful Links</h4>
+            <p>HomePage</p>
+            <p>About Us</p>
+            <p>Services</p>
+            <p>Pricing</p>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <p>Web Design</p>
+            <p>App Development</p>
+            <p>UI/UX Design</p>
+            <p>Business Stationery</p>
+          </div>
+          <div>
+            <h4>Contact Info</h4>
+            <p>11, Goodness Estate, Ib</p>
+            <p>Open: 08 AM - 10 PM</p>
+            <p>Help: +234-802-516-8334</p>
+            <p>hello@StudioBeam.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="foot">
+      <p class="copyright">StudioBeam.© Copyright 2025. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('navMenu').classList.toggle('active');
+      }
+    </script>
+
+</body>
+</html>

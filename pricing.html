@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing</title>
+  <link rel="icon" href="STUDIOB.jpg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Calibri;
+      background: #17252a;
+      color: #17252a;
+    }
+
+    header {
+      background-color: #17252a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .stu h1 {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Trebuchet MS';
+      animation: bounceDown 2s ease-in-out infinite;
+      margin: 0;
+    }
+
+    .stu {
+      border-top: 1px solid #000;
+      margin-bottom: 20px;
+    }
+    .studio {
+      color: white;
+    }
+
+    .b {
+      color: black;
+    }
+
+    .eam {
+      color: white;
+    }
+
+    .dot {
+      color: rgb(42, 219, 219);
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: left;
+      letter-spacing: 1px;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    h2, h4 {
+      color: #fff;
+    }
+
+    .pricing-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .pricing-section ul li {
+      font-weight: 500;
+    }
+
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 0 5px rgb(42, 219, 219);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card.featured {
+      border: 0.6px solid rgb(42, 219, 219);
+      box-shadow: 0 0 7px rgb(42, 219, 219);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #dd1b1b;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    }
+
+    .price span {
+      font-size: 16px;
+      color: #17252a;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-bottom: 20px;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    .card ul li {
+      margin: 10px 0;
+    }
+
+    .card button {
+      background: rgb(42, 219, 219);
+      border: none;
+      padding: 10px 20px;
+      color: #17252a;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .contact-form {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+   .contact-form span {
+      color: rgb(42, 219, 219);
+    }
+
+   h2 span {
+      color: rgb(42, 219, 219);
+    }
+
+    .contact-form h3 {
+      color: white;
+    }
+
+    .contact-form form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      background: #fff;
+      color: #17252a;
+    }
+
+    .contact-form button {
+      grid-column: span 2;
+      padding: 12px;
+      background: rgb(42, 219, 219);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+            letter-spacing: 1px;
+      word-spacing: 1px;
+      background: #17252a;
+      padding: 60px 20px 30px;
+      color: #fff;
+      text-align: left
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-content .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: rgb(42, 219, 219);
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .columns div {
+      min-width: 180px;
+    }
+
+    .columns h4 {
+      color: #aaa;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+    .columns p, .columns input {
+      margin: 6px 0;
+    }
+
+    .columns input {
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background: #1f2937;
+      color: #fff;
+    }
+
+    .columns button {
+      padding: 8px;
+      background: rgb(42, 219, 219);
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    footer p {
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      font-family: Calibri;
+      text-align: left;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+      .pricing-cards {
+        gap: 20px;
+      }
+
+      .contact-form form {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .columns {
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .contact-form form {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form button {
+        grid-column: span 1;
+      }
+
+      .footer-content {
+        padding: 0 10px;
+      }
+
+      .columns div {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 24px;
+      }
+
+      .price {
+        font-size: 26px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .contact-form h3 {
+        font-size: 18px;
+      }
+
+      .footer-content .logo {
+        font-size: 22px;
+      }
+
+      .columns h4 {
+        font-size: 16px;
+      }
+    }
+
+    .foot p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav-links" id="navMenu">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="pricing-section">
+    <h2>Choose an <span>Objective</span></h2>
+
+    <div class="pricing-cards">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p class="price">$149 <span>/Per Website</span></p>
+        <ul>
+          <li>Website Design</li>
+          <li>Web Hosting</li>
+          <li>Web Management</li>
+          <li>Customer Support</li>
+        </ul>
+        <button>Select</button>
+      </div>
+
+      <div class="card featured">
+        <h3>App Development</h3>
+        <p class="price">$499 <span>/Per Application</span></p>
+        <ul>
+          <li>App Build</li>
+          <li>App Upload</li>
+          <li>App Management</li>
+          <li>Customer Support</li>
+        </ul>
+        <button>Select</button>
+      </div>
+
+            <div class="card">
+        <h3>UI/UX Design</h3>
+        <p class="price">$99 <span>/Per Template</span></p>
+        <ul>
+          <li>Interface Design</li>
+          <li>Scalable & Updatable Templates</li>
+          <li>Corporate</li>
+          <li>Customer Support</li>
+        </ul>
+        <button>Select</button>
+      </div>
+
+            <div class="card">
+        <h3>Web & App Optimization</h3>
+        <p class="price">$69 <span>/Per App</span></p>
+        <ul>
+          <li>Web/App Upgrade</li>
+          <li>Speed Optimization</li>
+          <li>Bug Fixes</li>
+          <li>Customer Support</li>
+        </ul>
+        <button>Select</button>
+      </div>
+
+      <div class="card">
+        <h3>Corporate Identity Materials</h3>
+        <p class="price">$19 <span>/Per Document</span></p>
+        <ul>
+          <li>Custom & Responsive Invoice Generation</li>
+          <li>Exquisite Business Card Generation</li>
+          <li>Corporate Letterheads</li>
+          <li>Customer Support</li>
+        </ul>
+        <button>Select</button>
+      </div>
+
+    </div>
+
+    <div class="contact-form">
+      <h3>We Are <span>The Beam</span><br/> Behind Your Brand</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
+        <input type="text" placeholder="Your Phone">
+        <textarea placeholder="Additional Notes"></textarea>
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+  <footer class="stu">
+    <h1>
+      <span class="studio">Studio</span><span class="b">B</span><span class="eam">eam</span><span class="dot">.</span>
+    </h1>
+  </footer>
+      <div class="columns">
+        <div>
+          <h4>Useful Links</h4>
+          <p>HomePage</p>
+          <p>About Us</p>
+          <p>Services</p>
+          <p>Pricing</p>
+        </div>
+        <div>
+          <h4>Solutions</h4>
+          <p>Web Design</p>
+          <p>App Development</p>
+          <p>UI/UX Design</p>
+          <p>Business Stationery</p>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <p>11, Goodness Estate, Ib</p>
+          <p>Open: 08 AM - 10 PM</p>
+          <p>Help: +234-802-516-8334</p>
+          <p>hello@StudioBeam.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="foot">
+        <p class="copyright">StudioBeam.© Copyright 2025. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

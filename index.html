@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudioBeam.</title>
+  <link rel="icon" href="STUDIOB.jpg" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      font-family: Calibri;
+      background-color: #17252a;
+      color: white;
+    }
+
+    header {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .stu h1 {
+      font-size: 30px;
+      font-family: 'Trebuchet MS';
+      font-weight: bold;
+      animation: bounceDown 2s ease-in-out infinite;
+      margin: 0;
+      text-align: left;
+    }
+
+    .studio { color: white; }
+    .b { color: black; }
+    .eam { color: white; }
+    .dot { color: rgb(42, 219, 219); }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 45px;
+    }
+
+    .nav-links li a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .hamburger div {
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      margin: 4px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      background-color: transparent;
+      border-radius: 1px;
+      padding: 15px;
+      z-index: 3;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 12px 4px;
+      font-weight: bold;
+      text-align: left;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .hero-section {
+      background: linear-gradient(to right, #17252a, rgba(0, 174, 255, 0.5)), url('Lan10.jpg') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-text h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      font-family: verdana;
+      word-spacing: 1px;
+      letter-spacing: 1px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons .btn {
+      padding: 12px 24px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      border-radius: 5px;
+    }
+
+    .btn.white {
+      background: rgb(42, 219, 219);
+      color: black;
+      border: 1px solid #17252a;
+    }
+
+    .btn.blue {
+      background: #17252a;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      background-color: #17252a;
+      padding: 50px 0;
+      border-top: 1px solid black;
+    }
+
+    .service {
+      width: 65%;
+      text-align: center;
+    }
+
+    .service h2 {
+      color: rgb(42, 219, 219);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      text-align: center;
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu.show {
+        display: block;
+      }
+
+      .hero-buttons {
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .hero-buttons .btn {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .stu h1 {
+        font-size: 25px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-buttons .btn {
+        width: 80%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero-section">
+    <header>
+      <div class="stu">
+        <h1>
+          <span class="studio">Studio</span><span class="b">B</span><span class="eam">eam</span><span class="dot">.</span>
+        </h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Prices</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-text">
+      <h1>HEY THERE, WE ARE StudioBeam!</h1>
+      <p>A WEB DESIGN AND APP DEVELOPMENT AGENCY</p>
+      <div class="hero-buttons">
+        <a href="Home.html" class="btn white">Get Started</a>
+        <a href="Services.html" class="btn blue">Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="service">
+      <h2>POWERING BRANDS, PIXEL BY PIXEL.</h2>
+    </div>
+  </section>
+
+  <footer>
+    <p>StudioBeam.© Copyright 2025. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

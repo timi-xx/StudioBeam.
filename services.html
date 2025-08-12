@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services</title>
+  <link rel="icon" href="STUDIOB.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Calibri;
+      background: linear-gradient(135deg, #17252a, rgb(42, 219, 219));
+      color: #fff;
+    }
+
+    .agency-section {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .agency-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #fff;
+      color: #000;
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .learn-more {
+      text-decoration: none;
+      color: rgb(42, 219, 219);
+      font-weight: bold;
+      border-bottom: 2px solid #17252a;
+    }
+
+
+    @media (max-width: 992px) {
+      .cards {
+        gap: 20px;
+      }
+
+      .card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .card {
+        width: 80%;
+      }
+
+      .agency-section h1 {
+        font-size: 2rem;
+      }
+
+      .subtext {
+        font-size: 0.95rem;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .card {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .agency-section h1 {
+        font-size: 1.7rem;
+      }
+
+      .card img {
+        height: 150px;
+      }
+
+      .learn-more {
+        font-size: 0.9rem;
+      }
+    }
+
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: linear-gradient(135deg, #17252a, rgb(42, 219, 219));
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .stu h1 {
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Trebuchet MS';
+      animation: bounceDown 2s ease-in-out infinite;
+      margin: 0;
+    }
+
+    .stu {
+      border-top: 1px solid #000;
+      margin-bottom: 20px;
+    }
+    .studio {
+      color: white;
+    }
+
+    .b {
+      color: black;
+    }
+
+    .eam {
+      color: white;
+    }
+
+    .dot {
+      color: rgb(42, 219, 219);
+    }
+
+    @keyframes bounceDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: left;
+      letter-spacing: 1px;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    footer {
+            letter-spacing: 1px;
+      word-spacing: 1px;
+      background: transparent;
+      padding: 60px 0 30px;
+      color: #fff;
+      text-align: left
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-content .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: rgb(42, 219, 219);
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .columns div {
+      min-width: 180px;
+    }
+
+    .columns h4 {
+      color: #000;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+     .columns p {
+      color: #17252a;
+     }
+
+    .columns p, .columns input {
+      margin: 6px 0;
+    }
+
+    footer p {
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      font-family: Calibri;
+      text-align: left;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 992px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .columns {
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        padding: 0 10px;
+      }
+
+      .columns div {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-content .logo {
+        font-size: 22px;
+      }
+
+      .columns h4 {
+        font-size: 16px;
+      }
+    }
+
+    .foot p {
+      font-size: 13px;
+      color: #000;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+      <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-links" id="navMenu">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+  <section class="agency-section">
+    <h1>Our Services</h1>
+    <p class="subtext">
+      Trusted by 1000+ clients (Legal and professional services and creative agencies) across Africa and North America.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="Webdev1.png" alt="Web development">
+        <h3>Web Development</h3>
+        <p>Responsive Web Design & Development. Beautiful, fast, and mobile-friendly websites that look amazing on every device.</p>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+
+      <div class="card">
+        <img src="Appdev1.png" alt="App development">
+        <h3>App Development</h3>
+        <p>From iOS to Android and cross-platform solutions, we turn ideas into intuitive mobile apps that users love.</p>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+
+      <div class="card">
+        <img src="UIUX.png" alt="UI/UX">
+        <h3>UI/UX Design</h3>
+        <p>User-first design is our foundation. We craft sleek, intuitive interfaces that drive engagement and satisfaction.</p>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+
+      <div class="card">
+        <img src="Webapp.png" alt="Maintenance">
+        <h3>Maintenance & Optimization</h3>
+        <p>We support your digital assets. From bug fixes to speed optimization, we keep your systems smooth and current.</p>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+
+      <div class="card">
+        <img src="CS1.jpg" alt="Corporate Identity">
+        <h3>Corporate Identity Materials</h3>
+        <p>Branded, automated business stationeries and templates tailored to enhance your brand’s professional image.</p>
+        <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+    </div>
+        <footer>
+      <div class="footer-content">
+        <footer class="stu">
+          <h1>
+            <span class="studio">Studio</span><span class="b">B</span><span class="eam">eam</span><span class="dot">.</span>
+          </h1>
+        </footer>
+        <div class="columns">
+          <div>
+            <h4>Useful Links</h4>
+            <p>HomePage</p>
+            <p>About Us</p>
+            <p>Services</p>
+            <p>Pricing</p>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <p>Web Design</p>
+            <p>App Development</p>
+            <p>UI/UX Design</p>
+            <p>Business Stationery</p>
+          </div>
+          <div>
+            <h4>Contact Info</h4>
+            <p>11, Goodness Estate, Ib</p>
+            <p>Open: 08 AM - 10 PM</p>
+            <p>Help: +234-802-516-8334</p>
+            <p>hello@StudioBeam.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="foot">
+      <p class="copyright">StudioBeam.© Copyright 2025. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('navMenu').classList.toggle('active');
+      }
+    </script>
+
+</body>
+</html>
